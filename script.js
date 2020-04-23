@@ -1,7 +1,8 @@
 
 let getUserName = function(url){
-	let urlPart = url.pathname;
+	let urlPart = url.split('=');
   alert(urlPart);
+  let userName = urlPart[1];
 	if (userName  == undefined) {
         userName = 'OlgaVinogradova';
      }
@@ -10,7 +11,7 @@ let getUserName = function(url){
 const url = window.location.toString();
 let name = getUserName(url);
 
-fetch(`https://api.github.com/users/${getUserName(url)}`);
+fetch(`https://api.github.com/users/${name}`);
     .then(response => {
       if (response.status != 200) {
           return null;
