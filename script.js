@@ -1,5 +1,6 @@
 
 const url = window.location.toString();
+
 let getUserName = function(url){
 	let urlPart = url.split('=');
   alert(urlPart);
