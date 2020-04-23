@@ -13,7 +13,7 @@ let getUserName = function(url){
 
 let name = getUserName(url);
 
-fetch(`https://api.github.com/users/${name}`);
+fetch('https://api.github.com/users/' + name)
     .then(response => {
       if (response.status != 200) {
           return null;
