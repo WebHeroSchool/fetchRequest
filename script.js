@@ -1,6 +1,7 @@
 
 let getUserName = function(url){
 	let userName = url.pathname;
+  alert(url.pathname);
 	if (userName  == undefined) {
         userName = 'OlgaVinogradova';
      }
